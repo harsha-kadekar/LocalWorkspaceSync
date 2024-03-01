@@ -34,8 +34,11 @@ jobs:
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
-          command: python -m pytest
-
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install pytest
+            pytest tests
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
