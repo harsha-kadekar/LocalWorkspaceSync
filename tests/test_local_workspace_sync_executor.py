@@ -1,9 +1,8 @@
-import unittest
-from local_workspace_sync import local_workspace_sync_executor
+from local_workspace_sync import main
 
 
-class LocalWorkspaceSyncExecutorTest(unittest.TestCase):
+class TestLocalWorkspaceSyncExecutor:
 
     def test_add_numbers(self):
-        value = local_workspace_sync_executor.add_numbers(10, 20)
-        self.assertEquals(value, 30)
+        value = main.add_numbers(10, 20)
+        assert value == 30

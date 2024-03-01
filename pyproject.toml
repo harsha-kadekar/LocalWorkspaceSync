@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "LocalWorkspaceSync"
+version = "0.0.1"
+authors = [
+  {name = "Anuradha Kadekar", email = "anuradha.k.satish@gmail.com"},
+  {name = "Harsha Kadekar", email = "harsha.kadekar@gmail.com"},
+]
+description = "A package to sync your workspace to local folder"
+readme = "README.md"
+license = {text = "MIT License"}
+
+[project.urls]
+Repository = "https://github.com/harsha-kadekar/LocalWorkspaceSync"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+pythonpath = [
+  "."
+]
+
+[project.scripts]
+local-workspace-sync-executor = "local_workspace_sync.local_workspace_sync_executor:main_entry"
+
+[tool.hatch.build.targets.wheel]
+packages = ["local_workspace_sync"]
