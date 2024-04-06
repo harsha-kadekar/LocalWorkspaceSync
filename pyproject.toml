@@ -29,3 +29,12 @@ local-workspace-sync-executor = "local_workspace_sync.local_workspace_sync_execu
 
 [tool.hatch.build.targets.wheel]
 packages = ["local_workspace_sync"]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+fail_under = 80
+
+[tool.coverage.html]
+directory = ".coverage_html_report"
