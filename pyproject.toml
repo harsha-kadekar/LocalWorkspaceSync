@@ -38,3 +38,19 @@ fail_under = 80
 
 [tool.coverage.html]
 directory = ".coverage_html_report"
+
+[tool.ruff.lint]
+select = [
+    'A',
+    'E',
+    'F',
+    'Q',
+    'W',
+    'S'
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 88
