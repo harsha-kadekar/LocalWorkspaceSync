@@ -32,12 +32,17 @@ packages = ["local_workspace_sync"]
 
 [tool.coverage.run]
 branch = true
+source = ['.']
+command_line = '-m pytest tests'
 
 [tool.coverage.report]
-fail_under = 80
+fail_under = 95
 
 [tool.coverage.html]
 directory = ".coverage_html_report"
+
+[tool.ruff]
+include = ["pyproject.toml", "local_workspace_sync/**/*.py"]
 
 [tool.ruff.lint]
 select = [
