@@ -26,6 +26,7 @@ pythonpath = [
 
 [project.scripts]
 local-workspace-sync-executor = "local_workspace_sync.local_workspace_sync_executor:main_entry"
+local-workspace-sync-config = "local_workspace_sync.local_workspace_sync_config:main_entry"
 
 [tool.hatch.build.targets.wheel]
 packages = ["local_workspace_sync"]
