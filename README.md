@@ -86,5 +86,12 @@ pip install .
 cd venv/bin
 
 ./local-workspace-sync-executable
+./local-workspace-sync-config
+```
+
+- To deactivate the virtual environment
+
+```
+deactivate
 ```
 
